@@ -169,6 +169,8 @@ html {
 #rightnav a {
   text-decoration: none;
   color: black;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 header {
   display: flex;
@@ -177,14 +179,28 @@ header {
 header h2 {
   font-size: 1.6rem;
   font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  align-self: center;
 }
 header .sideBar {
   margin-top: 40px;
   margin-left: 50px;
   color: #b83b5e;
 }
+header p {
+  font-size: 1.2rem;
+  color: black;
+  text-align: left;
+  margin-right: 30px;
+}
 label {
   font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.checkIn {
+  margin-left: 50px;
 }
 .sideBarImg {
   margin-left: 50px;
@@ -194,6 +210,7 @@ label {
   margin-left: 50px;
 }
 input {
-  border-radius: 444px;
+  border-radius: 8px;
   text-align: center;
+  padding: 5px;
 }
