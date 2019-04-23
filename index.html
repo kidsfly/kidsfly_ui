@@ -16,7 +16,8 @@
   <div class="container">
 
     <div class="navigation">
-      <h1 class="logo"><strong>KIDSFLY</strong></h1>
+      <img src="img/logo.png" alt="">
+      <!--<h1 class="logo"><strong>KIDSFLY</strong></h1> -->
       <nav class="navMenu">
         <ul id="centernav">
           <li>ACCOUNT /</li>
@@ -25,12 +26,44 @@
         </ul>
         <ul id="rightnav">
           <li>Staff</li>
-          <li>About us</li>
-          <li class="fa fa-fw fa-search">Search</li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#"><i class="fa fa-fw fa-search"></i> Search</a></li>
         </ul>
       </nav>
     </div>
 
+
+ <header>
+
+   <div class="header-img">
+    <img src="img/headerImg.jpg" alt="airport">
+   </div>
+
+   <div class="sideBar">
+
+     <form class="" action="action_page.php" method="post">
+       <img class="sideBarImg" src="img/sideBarPlane.png" alt="icon">
+
+       <br>
+
+       <h2>FLIGHT STATUS</h2>
+       <input type="text" id="fstatus" name="flightStatus" placeholder="Search by Flight #">
+
+      <br>
+
+       <img class="sideBarImg2" src="img/sideBarPlane.png" alt="icon">
+       <h2>CHECK IN</h2>
+       <label for="lname">Last Name</label><br>
+       <input type="text" id="lname" name="lastname" placeholder="">
+
+       <br>
+
+       <label for="cCode">Confirmation code</label><br>
+       <input type="text" id="cCode" name="confirmationCode" placeholder="" required>
+     </form>
+
+   </div>
+ </header>
 
 
 
