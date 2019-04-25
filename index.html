@@ -8,6 +8,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
+  <script src="./js/index.js" async></script>
 
 </head>
 
@@ -41,7 +42,7 @@
 
       <div class="sideBar">
 
-        <form class="" action="action_page.php" method="post">
+        <form class="" action="index.html" method="post">
           <img class="sideBarImg" src="img/sideBarPlane.png" alt="icon">
 
           <br>
@@ -79,9 +80,58 @@
     </header>
 
 
+  <main>
 
+  <section class="Tabs">
 
+    <div class="tabContainer">
 
+      <div class="buttonContainer">
+        <button type="button" name="button" onclick="showPanel(0,'#f5f5f5')">BOOK A FLIGHT</button>
+        <button type="button" name="button" onclick="showPanel(1,'#f5f5f5')">CHECK IN</button>
+        <button type="button" name="button" onclick="showPanel(2,'#f5f5f5')">FLIGHT STATUS</button>
+      </div>
+
+      <div class="tabPanels">
+         <form action="">
+          <h3>BOOK A FLIGHT</h3>
+          <input type="radio" name="rtip" value=""> Round Trip
+          <input type="radio" name="oneway" value=""> One way
+        </form>
+
+        <br>
+
+        <form class="" action="index.html" method="post">
+          <label for="lname">From</label>
+          <input type="text" id="from" name="from" placeholder="" required>
+          <label for="cCode">To</label>
+          <input type="text" id="to" name="to" placeholder="" required>
+
+          <br>
+
+          <label for="lname">Depart Date</label>
+          <input type="text" id="DD" name="dDate" placeholder="" required>
+          <label for="cCode">Return Date</label>
+          <input type="text" id="Rdate" name="Rdate" placeholder="" required>
+
+          <br>
+
+          <label for="lname">Traverlers</label>
+          <input type="text" id="DD" name="dDate" placeholder="" required>
+
+          <br>
+          <button class="submitBtn" type="submit" name="button">SUBMIT</button>
+
+        </form>
+
+      </div>
+      <div class="tabPanels">tab 2: content</div>
+      <div class="tabPanels">tab 3: content</div>
+    </div>
+
+  </section>
+
+  </main>
 
 
 
