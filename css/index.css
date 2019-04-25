@@ -150,7 +150,7 @@ html {
 }
 @keyframes pulse {
   0% {
-    background-color: #b83b5e;
+    background-color: #f9f7f7;
   }
   100% {
     background-color: #f9ed69;
