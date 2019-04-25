@@ -235,6 +235,7 @@ html {
 header {
   display: flex;
   flex-direction: row;
+  max-height: 519px;
 }
 header h2 {
   font-size: 1.6rem;
@@ -255,15 +256,15 @@ header p {
   text-align: left;
   margin-right: 30px;
 }
-.headerImg {
-  margin-bottom: 0;
-}
 label {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 .checkIn {
   margin-left: 50px;
+}
+.checkCode {
+  margin-bottom: 20px;
 }
 .sideBarImg {
   margin-left: 50px;
@@ -333,13 +334,18 @@ section h1 {
 .cards p {
   font-size: 1.3rem;
 }
-.Tabs {
-  background: url("img/cloud.jpg");
-  background-size: cover;
+main {
+  background: url("../img/cloud.jpg");
+  background-repeat: repeat-x;
+  max-width: 780px;
+  height: 100%;
+  margin-top: 0;
 }
 .tabContainer {
   width: 70%;
   height: 350px;
+  margin-left: 100px;
+  margin-top: 10px;
 }
 .tabContainer .buttonContainer {
   height: 15%;
@@ -367,11 +373,29 @@ section h1 {
   background-color: #acacae;
   color: white;
   text-align: center;
-  padding-top: 105px;
   box-sizing: border-box;
+  border-radius: 4px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.5rem;
   display: none;
+}
+.date,
+.destination,
+.BAF {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 10px;
+}
+.passenger {
+  align-self: flex-start;
+}
+.submitBtn {
+  background-color: #b83b5e;
+  box-shadow: none;
+  border: 2px;
+  border-radius: 4px;
 }
 .footerNav {
   display: flex;
@@ -392,4 +416,63 @@ section h1 {
   align-self: center;
   margin-right: 20px;
   margin-left: 300px;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  header {
+    max-width: 800px;
+  }
+  .sideBar {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header-img {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navigation .logo {
+    margin-bottom: 20px;
+  }
+  #centernav {
+    margin-top: 0;
+    margin-right: 0;
+    padding-left: 10px;
+  }
+  #rightnav {
+    padding-right: 80px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+  .noti {
+    display: none;
+  }
+  .sideBar {
+    width: 100%;
+    margin-left: 500px;
+  }
+  .date,
+  .destination,
+  .BAF {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 0;
+  }
+  .footerNav {
+    display: none;
+  }
 }

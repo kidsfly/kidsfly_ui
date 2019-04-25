@@ -18,7 +18,7 @@
   <div class="container">
 
     <div class="navigation">
-      <a href="index.html"><img src="img/logo.png" alt=""></a>
+      <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
       <!--<h1 class="logo"><strong>KIDSFLY</strong></h1> -->
       <nav class="navMenu">
 
@@ -65,26 +65,30 @@
 
           <img class="sideBarImg2" src="img/sideBarPlane.png" alt="icon">
 
-          <h2 class="checkIn">CHECK IN</h2>
-          <label for="lname">Last Name</label><br>
-          <input type="text" id="lname" name="lastname" placeholder="">
+          <div class="checkCode">
 
-          <br>
+            <h2 class="checkIn">CHECK IN</h2>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="">
 
-          <label for="cCode">Confirmation code</label><br>
-          <input type="text" id="cCode" name="confirmationCode" placeholder="" required>
+            <br>
+
+            <label for="cCode">Confirmation code</label><br>
+            <input type="text" id="cCode" name="confirmationCode" placeholder="" required>
+          </div>
 
           <br>
 
           <img class="sideBarImg2" src="img/sideBarPlane.png" alt="icon">
-          <h2>NOTIFICATIONS</h2>
-          <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+          <div class="noti">
+            <h2>NOTIFICATIONS</h2>
+            <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+              Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+            <br>
+           <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
             Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+          </div>
 
-          <br>
-
-          <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
-            Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
         </form>
 
       </div>
@@ -104,7 +108,7 @@
           </div>
 
           <div class="tabPanels">
-            <form action="">
+            <form class="BAF" action="">
               <h3>BOOK A FLIGHT</h3>
               <input type="radio" name="rtip" value=""> Round Trip
               <input type="radio" name="oneway" value=""> One way
@@ -112,23 +116,29 @@
 
             <br>
 
-            <form class="" action="index.html" method="post">
-              <label for="lname">From</label>
-              <input type="text" id="from" name="from" placeholder="" required>
-              <label for="cCode">To</label>
-              <input type="text" id="to" name="to" placeholder="" required>
+            <form class="fInfo" action="index.html" method="post">
+
+              <div class="destination">
+                <label for="lname">From</label><br>
+                <input type="text" id="from" name="from" placeholder="" required>
+                <label for="cCode">To</label><br>
+                <input type="text" id="to" name="to" placeholder="" required>
+              </div>
+
+              <br>
+              <div class="date">
+                <label for="lname">Depart Date</label><br>
+                <input type="text" id="DD" name="dDate" placeholder="" required><br>
+                <label for="cCode">Return Date</label><br>
+                <input type="text" id="Rdate" name="Rdate" placeholder="" required>
+              </div>
 
               <br>
 
-              <label for="lname">Depart Date</label>
-              <input type="text" id="DD" name="dDate" placeholder="" required>
-              <label for="cCode">Return Date</label>
-              <input type="text" id="Rdate" name="Rdate" placeholder="" required>
-
-              <br>
-
-              <label for="lname">Traverlers</label>
-              <input type="text" id="DD" name="dDate" placeholder="" required>
+              <div class="passenger">
+                <label for="lname">Traverlers</label>
+                <input type="text" id="DD" name="dDate" placeholder="" required>
+              </div>
 
               <br>
               <button class="submitBtn" type="submit" name="button">SUBMIT</button>
