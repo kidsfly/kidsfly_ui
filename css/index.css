@@ -281,7 +281,6 @@ input {
   background-color: white;
   margin: 0 auto;
   max-width: 1080px;
-  min-height: 800px;
 }
 .about-section {
   margin: 40px auto;
@@ -305,6 +304,7 @@ section h1 {
   .cards {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 }
 .cards h4 {
@@ -318,6 +318,13 @@ section h1 {
   height: 300px;
   margin: 2px 0 40px;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .cards img {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+  }
 }
 .cards p {
   text-align: center;
@@ -367,7 +374,14 @@ main {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;
   font-size: 1.8rem;
-  background-color: #acacae;
+  background-color: #b83b5e;
+}
+@media (max-width: 500px) {
+  .tabContainer button {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
 }
 .tabContainer .buttonContainer button:hover {
   background-color: #b83b5e;
@@ -384,17 +398,31 @@ main {
   font-size: 1.5rem;
   display: none;
 }
+@media (max-width: 500px) {
+  .tabContainer .tabPanels {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+}
 .BAF,
 .date,
-.destination {
+.destination,
+.passenger {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
   padding-top: 10px;
 }
-.passenger {
-  align-self: flex-start;
+@media (max-width: 500px) {
+  .BAF,
+  .date,
+  .destination,
+  .passenger {
+    flex-direction: column;
+    margin-left: 0;
+  }
 }
 .submitBtn {
   background-color: #b83b5e;
@@ -402,12 +430,26 @@ main {
   border: 2px;
   border-radius: 4px;
 }
+.submitBtnhover {
+  color: white;
+}
+@media (max-width: 500px) {
+  .submitBtn {
+    height: auto;
+    width: auto;
+  }
+}
 .aboutFooterNav {
   display: flex;
   flex-direction: row;
   background-color: #f9ed69;
   margin-top: 600px;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .aboutFooterNav {
+    display: none;
+  }
 }
 .aboutFooterNav img {
   padding: 0;
@@ -492,7 +534,7 @@ main {
   .card,
   .card-container,
   .cards {
-    display: block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -509,9 +551,16 @@ main {
   .noti {
     display: none;
   }
-  form {
+  .asideBar {
     align-content: center;
     margin-left: 80px;
+  }
+  .passenger {
+    flex-direction: column;
+  }
+  .Tabs {
+    display: flex;
+    flex-direction: column;
   }
   .sideBar {
     width: 80%;
