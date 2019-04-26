@@ -7,7 +7,9 @@
   <title>Kids Fly</title>
 
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/index.css">
+  <script src="./js/index.js" async></script>
 
 </head>
 
@@ -16,19 +18,29 @@
   <div class="container">
 
     <div class="navigation">
-      <a href="index.html"><img src="img/logo.png" alt=""></a>
+      <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
       <!--<h1 class="logo"><strong>KIDSFLY</strong></h1> -->
       <nav class="navMenu">
-        <ul id="centernav">
-          <li>ACCOUNT /</li>
-          <li>MY TRIP /</li>
-          <li>BOOK A FLIGHT</li>
-        </ul>
-        <ul id="rightnav">
-          <li>Staff</li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="#"><i class="fa fa-fw fa-search"></i> Search</a></li>
-        </ul>
+
+        <div id="centernav">
+          <a href="#">/ BOOK A FLIGHT </a>
+          <a href="#">/ MY TRIP </a>
+          <div class="dropdown">
+            <button class="dropbtn">ACCOUNT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Log In</a>
+              <a href="#">Sign up</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="rightnav">
+          <a href="#">Staff</a>
+          <a href="about.html">About us</a>
+          <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+        </div>
       </nav>
     </div>
 
@@ -41,7 +53,7 @@
 
       <div class="sideBar">
 
-        <form class="" action="action_page.php" method="post">
+        <form class="" action="index.html" method="post">
           <img class="sideBarImg" src="img/sideBarPlane.png" alt="icon">
 
           <br>
@@ -53,38 +65,110 @@
 
           <img class="sideBarImg2" src="img/sideBarPlane.png" alt="icon">
 
-          <h2 class="checkIn">CHECK IN</h2>
-          <label for="lname">Last Name</label><br>
-          <input type="text" id="lname" name="lastname" placeholder="">
+          <div class="checkCode">
 
-          <br>
+            <h2 class="checkIn">CHECK IN</h2>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="">
 
-          <label for="cCode">Confirmation code</label><br>
-          <input type="text" id="cCode" name="confirmationCode" placeholder="" required>
+            <br>
+
+            <label for="cCode">Confirmation code</label><br>
+            <input type="text" id="cCode" name="confirmationCode" placeholder="" required>
+          </div>
 
           <br>
 
           <img class="sideBarImg2" src="img/sideBarPlane.png" alt="icon">
-          <h2>NOTIFICATIONS</h2>
-          <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+          <div class="noti">
+            <h2>NOTIFICATIONS</h2>
+            <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
+              Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+            <br>
+           <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
             Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
+          </div>
 
-          <br>
-
-          <p>Aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.
-            Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>
         </form>
 
       </div>
     </header>
 
 
+    <main class="Tabs">
 
+      <section>
 
+        <div class="tabContainer">
 
+          <div class="buttonContainer">
+            <button type="button" name="button" onclick="showPanel(0,'#f5f5f5')">BOOK A FLIGHT</button>
+            <button type="button" name="button" onclick="showPanel(1,'#f5f5f5')">CHECK IN</button>
+            <button type="button" name="button" onclick="showPanel(2,'#f5f5f5')">FLIGHT STATUS</button>
+          </div>
 
+          <div class="tabPanels">
+            <form class="BAF" action="">
+              <h3>BOOK A FLIGHT</h3>
+              <input type="radio" name="rtip" value=""> Round Trip
+              <input type="radio" name="oneway" value=""> One way
+            </form>
 
+            <br>
 
+            <form class="fInfo" action="index.html" method="post">
+
+              <div class="destination">
+                <label for="lname">From</label><br>
+                <input type="text" id="from" name="from" placeholder="" required>
+                <label for="cCode">To</label><br>
+                <input type="text" id="to" name="to" placeholder="" required>
+              </div>
+
+              <br>
+              <div class="date">
+                <label for="lname">Depart Date</label><br>
+                <input type="text" id="DD" name="dDate" placeholder="" required><br>
+                <label for="cCode">Return Date</label><br>
+                <input type="text" id="Rdate" name="Rdate" placeholder="" required>
+              </div>
+
+              <br>
+
+              <div class="passenger">
+                <label for="lname">Traverlers</label>
+                <input type="text" id="DD" name="dDate" placeholder="" required>
+              </div>
+
+              <br>
+              <button class="submitBtn" type="submit" name="button">SUBMIT</button>
+
+            </form>
+
+          </div>
+          <div class="tabPanels">tab 2: content</div>
+          <div class="tabPanels">tab 3: content</div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+
+      <div class="footerNav">
+        <img src="img/facebook.png" alt="">
+        <img src="img/snapchat.png" alt="">
+        <img src="img/instagram.png" alt="">
+        <img src="img/twitter.png" alt="">
+        <img src="img/youtube.png" alt="">
+        <nav>
+          <a href="#">CONTACT US</a>
+          <a href="#">SUPPORT</a>
+        </nav>
+      </div>
+
+    </footer>
 
   </div>
 
